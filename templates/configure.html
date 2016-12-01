@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<head>
+<title>Register a new tester</title>
+</head>
+<body>
+<h1>Please fill your details:</h1>
+{% from "_formhelpers.html" import render_field %}
+<form method=post action="/initialize-game/">
+  <dl>
+    {{ render_field(form.first_name) }}
+    {{ render_field(form.last_name) }}
+    {{ render_field(form.email) }}
+    {{ render_field(form.id) }}
+    {{ render_field(form.age) }}
+  </dl>
+  <p><input type=submit value=Initialize>
+</form>
+</body>
